@@ -33,7 +33,8 @@ class _PageeState extends State<Pagee> {
                 title: Text("ADD STUDENTS"),
                 content: Column(
                   children: [
-                    TextField(controller: name,
+                    TextField(
+                      controller: name,
                       decoration: InputDecoration(
                         labelText: "Name",
                         border: OutlineInputBorder(
@@ -43,7 +44,8 @@ class _PageeState extends State<Pagee> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(controller: age,
+                    TextField(
+                      controller: age,
                       decoration: InputDecoration(
                         labelText: "Age",
                         border: OutlineInputBorder(
@@ -53,7 +55,8 @@ class _PageeState extends State<Pagee> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(controller: phone,
+                    TextField(
+                      controller: phone,
                       decoration: InputDecoration(
                         labelText: "Phone no",
                         border: OutlineInputBorder(
@@ -63,7 +66,8 @@ class _PageeState extends State<Pagee> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(controller: department,
+                    TextField(
+                      controller: department,
                       decoration: InputDecoration(
                         labelText: "Department",
                         border: OutlineInputBorder(
@@ -73,7 +77,18 @@ class _PageeState extends State<Pagee> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    ElevatedButton(onPressed: () {add_student(name: name.text, age: age.text, phone: phone.text, department: department.text);}, child: Text("ADD")),
+                    ElevatedButton(
+                      onPressed: () {
+                        add_student(
+                          name: name.text,
+                          age: age.text,
+                          phone: phone.text,
+                          department: department.text,
+                          context: context
+                        );
+                      },
+                      child: Text("ADD"),
+                    ),
                   ],
                 ),
               );
