@@ -11,3 +11,5 @@ async
 {await FirebaseFirestore.instance.collection("students").add({"Name":name,"Age":age,"phone no":phone,"Department":department});
 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("SUCCESFULLY SUBMITTED")));
 }
+Stream<QuerySnapshot>fetchdata(){return FirebaseFirestore.instance.collection("students").snapshots();}
+Future<void>deletedata(String id)async{await FirebaseFirestore.instance.collection("students").doc(id).delete();}
